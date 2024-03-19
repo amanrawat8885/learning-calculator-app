@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter first number <input type="text" name="fname" id="fname"> <br>
+    <select name="" id="opp">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select><br>
+    enter second number <input type="text" name="lname" id="lname"> <br>
+    
+    <button onclick="cal()">Click</button>
+    <div>
+        <p id="ans"></p>
+    </div>
+    <script>
+        function cal(){
+            let fname = parseInt(document.getElementById("fname").value);
+            let lname = parseInt(document.getElementById("lname").value);
+            let opp = document.getElementById("opp").value;
+            let result = document.getElementById("ans");
+            switch(opp){
+                case "+":
+                    result.innerText = fname + lname;
+                    break;
+
+                case "-":
+                    result.innerText = fname - lname;
+                    break;
+
+                case "*":
+                    result.innerText = fname * lname;
+                    break;
+
+                case "/":
+                    result.innerText = fname / lname;
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
